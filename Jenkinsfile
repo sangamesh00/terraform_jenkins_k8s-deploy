@@ -11,7 +11,7 @@ pipeline {
     stage ('vcs'){
      steps {
         git url: 'https://github.com/sangamesh00/test00.git',
-            branch: 'develop'
+            branch: 'master'
      }
     }
     stage(build) {
