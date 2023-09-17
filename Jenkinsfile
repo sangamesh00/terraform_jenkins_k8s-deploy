@@ -22,11 +22,6 @@ pipeline {
       }
     
     }
-    stage(k8susingterraform) {
-      steps{
-         sh script: 'git clone https://github.com/hashicorp/learn-terraform-provision-eks-cluster'
-         sh script: 'cd learn-terraform-provision-eks-cluster'
-      }
-    }
+
  }
 }
