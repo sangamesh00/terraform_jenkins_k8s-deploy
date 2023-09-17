@@ -24,8 +24,7 @@ pipeline {
     }
     stage(k8sterrafaorm){
       steps{
-         sh script: 'cd terraform'
-         sh script: 'terraform init'
+         sh script: 'cd terraform && terraform init'
          sh script: 'terraform apply -auto-approve'
          sh script: 'aws eks --region $(terraform output -raw region) update-kubeconfig \
                                 --name $(terraform output -raw cluster_name)'
