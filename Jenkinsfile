@@ -24,7 +24,7 @@ pipeline {
     }
     stage(k8sterrafaorm){
       steps{
-         sh script: 'cd terraform && terraform init && terraform apply -auto-approve'
+         sh script: 'cd terraform && terraform init && terraform destroy -auto-approve'
          
       }
     }
