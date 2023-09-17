@@ -27,20 +27,3 @@ spec:
           image: nginx
           ports:
             - containerPort: 80
-
----
-
-apiVersion: v1
-kind: Service
-metadata: 
-  name: mysvc 
-  labels: 
-    app: nginx
-spec: 
-  type: ClusterIP
-  selector: 
-    app: nginx
-  ports: 
-    - port: 
-      targetPort: 80
-      protocol: 80 
