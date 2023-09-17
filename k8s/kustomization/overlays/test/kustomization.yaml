@@ -1,0 +1,12 @@
+---
+resources:
+  - ../../base
+
+
+namespace: test
+namePrefix: test-
+
+labels:
+  - pairs:
+      env: dev
+      version: "1.0.2"
