@@ -31,7 +31,7 @@ pipeline {
     }
     stage(k8sdeploy){
       steps{
-         sh script: 'cd k8s/kustomization/overlays/dev && kubectl apply -k  kustomization.yaml'
+         sh script: 'cd k8s && kubectl apply k8s.yaml'
       }
     }
 
