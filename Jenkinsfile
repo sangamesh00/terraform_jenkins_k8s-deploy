@@ -24,7 +24,7 @@ pipeline {
     }
     stage(k8sterrafaorm){
       steps{
-         sh script: 'cd terraform && terraform init && terraform destroy -auto-approve && aws eks --region $(terraform output -raw region) update-kubeconfig \
+         sh script: 'cd terraform && terraform init && terraform apply -auto-approve && aws eks --region $(terraform output -raw region) update-kubeconfig \
                                 --name $(terraform output -raw cluster_name)'
          
       }
